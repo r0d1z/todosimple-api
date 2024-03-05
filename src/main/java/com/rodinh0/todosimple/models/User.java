@@ -3,6 +3,7 @@ package com.rodinh0.todosimple.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
@@ -80,6 +81,7 @@ public class User {
         this.password = password;
     }
 
+    @JsonIgnore
     public List<Task> getTask() {
         return this.task;
     }
